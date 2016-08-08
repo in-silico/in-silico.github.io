@@ -110,6 +110,7 @@ html, body {
   position: fixed;
   z-index: 9999;
   font-weight: bold;
+  display: none;
 }
 
 .navbar:before,
