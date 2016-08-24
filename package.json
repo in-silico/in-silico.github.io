@@ -7,14 +7,17 @@
     "build-css": "postcss -u autoprefixer -u postcss-custom-properties -o  build/main.css assets/css/style.css",
     "build-js": "browserify build/main.js -o assets/js/bundle.js",
     "build": "npm run build-css && npm run build-js",
-    "serve": "http-server .",
+    "serve": "npm run build && http-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/in-silico/in-silico.github.io.git"
   },
-  "author": "Manuel Pineda <manuel.felipe.pineda@gmail.com> (http://github.com/pin3da)",
+  "author": [
+    "Alejandro Esteban Rendon <alejorendon@utp.edu.co> (http://github.com/aerendon)",
+    "Sebastian Duque Restrepo <sebas.duque@utp.edu.co> (http://github.com/sebas095)"
+  ],
   "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/in-silico/in-silico.github.io/issues"
