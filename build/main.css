@@ -62,7 +62,7 @@ html, body {
   clear: both;
   display: block;
   margin: 0 auto;
-  padding: 50px;
+  padding: 100px 50px;
   max-width: 1366px;
   min-height: 95% !important;
 }
@@ -97,9 +97,9 @@ html, body {
 .navbar > a {
 	position: fixed;
 	cursor: pointer;
-	height: 30px;
-	line-height: 30px;
-  font-size: 18px;
+	height: 60px;
+	line-height: 60px;
+  font-size: 14px;
 	color: #444;
   background: #fff;
 	text-align: center;
@@ -235,14 +235,14 @@ h2 { margin: 15px 0; }
 /* Efectos Perfiles */
 
 .container-img {
-    width: 300px;
-    height: 300px;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    cursor: default;
-    background: #fff;
+  width: 300px;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #fff;
 }
 
 .container-img img {
