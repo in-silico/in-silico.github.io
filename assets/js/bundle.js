@@ -8,7 +8,10 @@
 (function() {
   var $ = require('jquery');
   // changeHeight('.tabla-contenido');
+  changeHeight('#2016 .tabla-contenido');
   changeHeight('#2015 .tabla-contenido');
+  changeHeight('#2014 .tabla-contenido');
+  changeHeight('#integrantes .tabla-contenido');
 
   $('.group').click(function() {
     // alert("hola");

@@ -91,6 +91,7 @@ html, body {
 }
 
 .down { position: absolute; }
+.inactive { background: #757575; }
 
 /*Navigation*/
 
@@ -101,7 +102,7 @@ html, body {
 	line-height: 60px;
   font-size: 14px;
 	color: #444;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
 	text-align: center;
   z-index: 9999;
 }

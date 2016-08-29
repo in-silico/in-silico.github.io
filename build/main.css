@@ -62,9 +62,9 @@ html, body {
   clear: both;
   display: block;
   margin: 0 auto;
-  padding: 100px 50px;
+  padding: 80px 50px;
   max-width: 1366px;
-  min-height: 95% !important;
+  min-height: 100% !important;
 }
 
 .container{
@@ -101,7 +101,7 @@ html, body {
 	line-height: 60px;
   font-size: 14px;
 	color: #444;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
 	text-align: center;
   z-index: 9999;
 }
