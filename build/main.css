@@ -91,6 +91,7 @@ html, body {
 }
 
 .down { position: absolute; }
+.inactive { background: #757575; }
 
 /*Navigation*/
 
