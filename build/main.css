@@ -91,7 +91,6 @@ html, body {
 }
 
 .down { position: absolute; }
-.inactive { background: #757575; }
 
 /*Navigation*/
 
@@ -285,6 +284,8 @@ h2 { margin: 15px 0; }
 }
 
 li { list-style:none; }
+
+.inactive { background: #757575; }
 
 /*Media*/
 

@@ -57,9 +57,131 @@
       $($el[i]).css('height', `${maxHeight}px`);
     }
   }
+
+  // json
+  const json = require('../data/data.json');
+
+  // alert(json["member"][0].name);
+  // alert(json["contest"][0].teams[0]);
+  members = json["member"];
+  alert(members[0].name);
+
 })();
 
-},{"jquery":2}],2:[function(require,module,exports){
+},{"../data/data.json":2,"jquery":3}],2:[function(require,module,exports){
+module.exports={
+  "member": [
+  {
+      "id":    1,
+      "name":  "Hugo Humberto Morales Peña",
+      "photo": "hugo.jpeg",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    2,
+      "name":  "Manuel Felipe Pineda",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    3,
+      "name":  "Alejandro Esteban Rendon Diosa",
+      "photo": "arendon.jpg",
+      "web":   "",
+      "email": "alejorendon@utp.edu.co"
+    },
+    {
+      "id":    4,
+      "name":  "Sebastian Duque Restrepo",
+      "photo": "baldor.jpeg",
+      "web":   "",
+      "email": "sebas.duque@utp.edu.co"
+    },
+    {
+      "id":    5,
+      "name":  "Leiver Andrés Campeón Benjumea",
+      "photo": "leiver.jpeg",
+      "web":   "",
+      "email": "leiverandres@utp.edu.co"
+    },
+    {
+      "id":    6,
+      "name":  "Juan Sebastián Vega Patiño",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    7,
+      "name":  "Jonatan Gutierrez Obando",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    8,
+      "name":  "Carolina Gómez Trejos",
+      "photo": "caro.jpg",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    9,
+      "name":  "Sebastian Gómez Gonzales",
+      "photo": "sgomez.jpg",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    10,
+      "name":  "Yeferson Gaitán",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    11,
+      "name":  "Carlos Andrés Arias",
+      "photo": "",
+      "web":   "",
+      "email": "canarias@utp.edu.co"
+    }
+  ],
+  "team": [
+    {
+      "id":      1,
+      "name":    "UTPitos",
+      "members": [ 6, 7, 8 ],
+      "coach":   ""
+    },
+    {
+      "id":      2,
+      "name":    "No name Available.",
+      "members": [ 2, 10, 11 ],
+      "coach":   ""
+    },
+    {
+      "id":      3,
+      "name":    "UTP-tardos",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    }
+  ],
+  "contest": [
+    {
+      "year": "2016",
+      "teams": [ 1, 2, 3 ]
+    },
+    {
+      "year": "2015",
+      "teams": [ ]
+    }
+  ]
+}
+
+},{}],3:[function(require,module,exports){
 /*eslint-disable no-unused-vars*/
 /*!
  * jQuery JavaScript Library v3.1.0

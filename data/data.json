@@ -1,15 +1,111 @@
 {
-  "integrantes": [
-    {
-      "id": 1,
-      "nombre": "alejo"
+  "member": [
+  {
+      "id":    1,
+      "name":  "Hugo Humberto Morales Peña",
+      "photo": "hugo.jpeg",
+      "web":   "",
+      "email": ""
     },
     {
-      "id": 1,
-      "nombre": "alejo"
+      "id":    2,
+      "name":  "Manuel Felipe Pineda",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    3,
+      "name":  "Alejandro Esteban Rendon Diosa",
+      "photo": "arendon.jpg",
+      "web":   "",
+      "email": "alejorendon@utp.edu.co"
+    },
+    {
+      "id":    4,
+      "name":  "Sebastian Duque Restrepo",
+      "photo": "baldor.jpeg",
+      "web":   "",
+      "email": "sebas.duque@utp.edu.co"
+    },
+    {
+      "id":    5,
+      "name":  "Leiver Andrés Campeón Benjumea",
+      "photo": "leiver.jpeg",
+      "web":   "",
+      "email": "leiverandres@utp.edu.co"
+    },
+    {
+      "id":    6,
+      "name":  "Juan Sebastián Vega Patiño",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    7,
+      "name":  "Jonatan Gutierrez Obando",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    8,
+      "name":  "Carolina Gómez Trejos",
+      "photo": "caro.jpg",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    9,
+      "name":  "Sebastian Gómez Gonzales",
+      "photo": "sgomez.jpg",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    10,
+      "name":  "Yeferson Gaitán",
+      "photo": "",
+      "web":   "",
+      "email": ""
+    },
+    {
+      "id":    11,
+      "name":  "Carlos Andrés Arias",
+      "photo": "",
+      "web":   "",
+      "email": "canarias@utp.edu.co"
     }
   ],
-  "seleccion": [
-
+  "team": [
+    {
+      "id":      1,
+      "name":    "UTPitos",
+      "members": [ 6, 7, 8 ],
+      "coach":   ""
+    },
+    {
+      "id":      2,
+      "name":    "No name Available.",
+      "members": [ 2, 10, 11 ],
+      "coach":   ""
+    },
+    {
+      "id":      3,
+      "name":    "UTP-tardos",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    }
+  ],
+  "contest": [
+    {
+      "year": "2016",
+      "teams": [ 1, 2, 3 ]
+    },
+    {
+      "year": "2015",
+      "teams": [ ]
+    }
   ]
 }

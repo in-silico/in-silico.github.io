@@ -56,4 +56,13 @@
       $($el[i]).css('height', `${maxHeight}px`);
     }
   }
+
+  // json
+  const json = require('../data/data.json');
+
+  // alert(json["member"][0].name);
+  // alert(json["contest"][0].teams[0]);
+  members = json["member"];
+  alert(members[0].name);
+
 })();
