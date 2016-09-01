@@ -59,10 +59,23 @@
 
   // json
   const json = require('../data/data.json');
-
   // alert(json["member"][0].name);
   // alert(json["contest"][0].teams[0]);
   members = json["member"];
-  alert(members[0].name);
+
+  //sort
+  function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+      var x = a[key]; var y = b[key];
+      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+  }
+  members = sortByKey(members, 'name');
+  // alert(members[0].name);
+  // members.sort();
+  for (var i = 0; i< members.length; i++) {
+    alert(members[i].name);
+  }
+
 
 })();
