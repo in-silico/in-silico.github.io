@@ -103,6 +103,86 @@
       "web":   "",
       "email": "alejomoreno@utp.edu.co",
       "state": "inactive"
+    },
+    {
+      "id":    14,
+      "name":  "Miguel Ángel Mendoza",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    15,
+      "name":  "Sebastian Hoyos Muriel",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    16,
+      "name":  "Andrés Felipe Mosquera",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    17,
+      "name":  "Jhon Bernardo Jimenez",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    18,
+      "name":  "Diego A. Agudelo España",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    19,
+      "name":  "Juan David Gil",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    20,
+      "name":  "Carlos Fernando Santana",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    21,
+      "name":  "Angélica Aguirre Castro",
+      "photo": "",
+      "web":   "",
+      "email": "anaguirre@utp.edu.co",
+      "state": "inactive"
+    },
+    {
+      "id":    22,
+      "name":  "Santiago Gutierrez Alzate",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    23,
+      "name":  "Steven Pineda",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
     }
   ],
   "team": [

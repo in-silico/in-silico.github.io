@@ -1,13 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// (function() {
-//   var $ = require('jquery');
-//   var msj = "<p>This is an example with jQuery</p>";
-//   $('#inicio').append(msj);
-// })();
-
 (function() {
   var $ = require('jquery');
-  // changeHeight('.tabla-contenido');
+
   changeHeight('#2016 .tabla-contenido');
   changeHeight('#2015 .tabla-contenido');
   changeHeight('#2014 .tabla-contenido');
@@ -74,27 +68,34 @@
   members = sortByKey(members, 'name');
 
   let div_members = document.getElementById("integrantes");
-  div_members.innerHTML += "<div class=\"contenido\">" + "<div class=\"row\">"
-  // alert(members[0].name);
-  // members.sort();
+  div_members.innerHTML +=
+  "<div class=\"contenido\">" +
+    "<div class=\"row\">"
+
   for (var i = 0; i< members.length; i++) {
-    // alert(members[i].name);
     let photo = members[i].photo;
     let state = members[i].state;
     if (!photo.localeCompare("")) photo = "profile.png";
     if (state.localeCompare("inactive")) state = "";
 
-    div_members.innerHTML += "<div class=\"col-2\">" +
-    "<div class=\"tabla-contenido-img " + state + "\">" +
-    "<img src=\"/assets/img/" + photo + "\" />" +
-    "</div>" +
-    "<div class=\"tabla-contenido " + state + " \">" +
-    members[i].name +
-    "</div>" +
+    div_members.innerHTML +=
+    "<div class=\"col-2\">" +
+      "<div class=\"tabla-contenido-img " + state + "\">" +
+        "<img src=\"/assets/img/" + photo + "\" />" +
+      "</div>" +
+      "<div class=\"tabla-contenido " + state + " \">" +
+        members[i].name +
+      "</div>" +
     "</div>"
   }
 
-  div_members.innerHTML += "</div>" + "</div>"
+  div_members.innerHTML +=
+    "</div>" +
+  "</div>"
+
+  //Contest
+  
+
 
 
   changeHeight('#2016 .tabla-contenido');
@@ -208,6 +209,86 @@ module.exports={
       "photo": "rosadito.jpg",
       "web":   "",
       "email": "alejomoreno@utp.edu.co",
+      "state": "inactive"
+    },
+    {
+      "id":    14,
+      "name":  "Miguel Ángel Mendoza",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    15,
+      "name":  "Sebastian Hoyos Muriel",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    16,
+      "name":  "Andrés Felipe Mosquera",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    17,
+      "name":  "Jhon Bernardo Jimenez",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    18,
+      "name":  "Diego A. Agudelo España",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    19,
+      "name":  "Juan David Gil",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    20,
+      "name":  "Carlos Fernando Santana",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    21,
+      "name":  "Angélica Aguirre Castro",
+      "photo": "",
+      "web":   "",
+      "email": "anaguirre@utp.edu.co",
+      "state": "inactive"
+    },
+    {
+      "id":    22,
+      "name":  "Santiago Gutierrez Alzate",
+      "photo": "",
+      "web":   "",
+      "email": "",
+      "state": "inactive"
+    },
+    {
+      "id":    23,
+      "name":  "Steven Pineda",
+      "photo": "",
+      "web":   "",
+      "email": "",
       "state": "inactive"
     }
   ],
