@@ -60,27 +60,47 @@
 
   // json
   const json = require('../data/data.json');
-
   // alert(json["member"][0].name);
   // alert(json["contest"][0].teams[0]);
-  members = json["member"];
+  let members = json["member"];
 
   //sort
   function sortByKey(array, key) {
     return array.sort(function(a, b) {
-        var x = a[key]; var y = b[key];
-        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      var x = a[key]; var y = b[key];
+      return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
   }
-
   members = sortByKey(members, 'name');
+
+  let div_members = document.getElementById("integrantes");
+  div_members.innerHTML += "<div class=\"contenido\">" + "<div class=\"row\">"
   // alert(members[0].name);
   // members.sort();
   for (var i = 0; i< members.length; i++) {
-    alert(members[i].name);
+    // alert(members[i].name);
+    let photo = members[i].photo;
+    let state = members[i].state;
+    if (!photo.localeCompare("")) photo = "profile.png";
+    if (state.localeCompare("inactive")) state = "";
+
+    div_members.innerHTML += "<div class=\"col-2\">" +
+    "<div class=\"tabla-contenido-img " + state + "\">" +
+    "<img src=\"/assets/img/" + photo + "\" />" +
+    "</div>" +
+    "<div class=\"tabla-contenido " + state + " \">" +
+    members[i].name +
+    "</div>" +
+    "</div>"
   }
 
+  div_members.innerHTML += "</div>" + "</div>"
 
+
+  changeHeight('#2016 .tabla-contenido');
+  changeHeight('#2015 .tabla-contenido');
+  changeHeight('#2014 .tabla-contenido');
+  changeHeight('#integrantes .tabla-contenido');
 })();
 
 },{"../data/data.json":2,"jquery":3}],2:[function(require,module,exports){
@@ -91,77 +111,104 @@ module.exports={
       "name":  "Hugo Humberto Morales Peña",
       "photo": "hugo.jpeg",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "active"
     },
     {
       "id":    2,
       "name":  "Manuel Felipe Pineda",
       "photo": "",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "active"
     },
     {
       "id":    3,
       "name":  "Alejandro Esteban Rendon Diosa",
       "photo": "arendon.jpg",
       "web":   "",
-      "email": "alejorendon@utp.edu.co"
+      "email": "alejorendon@utp.edu.co",
+      "state": "active"
     },
     {
       "id":    4,
       "name":  "Sebastian Duque Restrepo",
       "photo": "baldor.jpeg",
       "web":   "",
-      "email": "sebas.duque@utp.edu.co"
+      "email": "sebas.duque@utp.edu.co",
+      "state": "active"
     },
     {
       "id":    5,
       "name":  "Leiver Andrés Campeón Benjumea",
       "photo": "leiver.jpeg",
       "web":   "",
-      "email": "leiverandres@utp.edu.co"
+      "email": "leiverandres@utp.edu.co",
+      "state": "active"
     },
     {
       "id":    6,
       "name":  "Juan Sebastián Vega Patiño",
       "photo": "",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "active"
     },
     {
       "id":    7,
       "name":  "Jonatan Gutierrez Obando",
       "photo": "",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "active"
     },
     {
       "id":    8,
       "name":  "Carolina Gómez Trejos",
       "photo": "caro.jpg",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "active"
     },
     {
       "id":    9,
       "name":  "Sebastian Gómez Gonzales",
       "photo": "sgomez.jpg",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "inactive"
     },
     {
       "id":    10,
       "name":  "Yeferson Gaitán",
       "photo": "",
       "web":   "",
-      "email": ""
+      "email": "",
+      "state": "active"
     },
     {
       "id":    11,
       "name":  "Carlos Andrés Arias",
       "photo": "",
       "web":   "",
-      "email": "canarias@utp.edu.co"
+      "email": "canarias@utp.edu.co",
+      "state": "active"
+    },
+    {
+      "id":    12,
+      "name":  "Alejandro Suarez García",
+      "photo": "alsuga.jpg",
+      "web":   "",
+      "email": "alejandro@sirius.utp.edu.co",
+      "state": "inactive"
+    },
+    {
+      "id":    13,
+      "name":  "José Alejandro Moreno Agudelo",
+      "photo": "rosadito.jpg",
+      "web":   "",
+      "email": "alejomoreno@utp.edu.co",
+      "state": "inactive"
     }
   ],
   "team": [

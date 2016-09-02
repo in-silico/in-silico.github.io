@@ -61,7 +61,7 @@
   const json = require('../data/data.json');
   // alert(json["member"][0].name);
   // alert(json["contest"][0].teams[0]);
-  members = json["member"];
+  let members = json["member"];
 
   //sort
   function sortByKey(array, key) {
@@ -71,11 +71,38 @@
     });
   }
   members = sortByKey(members, 'name');
+
+  let div_members = document.getElementById("integrantes");
+  div_members.innerHTML +=
+  "<div class=\"contenido\">" +
+    "<div class=\"row\">"
   // alert(members[0].name);
   // members.sort();
   for (var i = 0; i< members.length; i++) {
-    alert(members[i].name);
+    // alert(members[i].name);
+    let photo = members[i].photo;
+    let state = members[i].state;
+    if (!photo.localeCompare("")) photo = "profile.png";
+    if (state.localeCompare("inactive")) state = "";
+
+    div_members.innerHTML +=
+    "<div class=\"col-2\">" +
+      "<div class=\"tabla-contenido-img " + state + "\">" +
+        "<img src=\"/assets/img/" + photo + "\" />" +
+      "</div>" +
+      "<div class=\"tabla-contenido " + state + " \">" +
+        members[i].name +
+      "</div>" +
+    "</div>"
   }
 
+  div_members.innerHTML +=
+    "</div>" +
+  "</div>"
 
+
+  changeHeight('#2016 .tabla-contenido');
+  changeHeight('#2015 .tabla-contenido');
+  changeHeight('#2014 .tabla-contenido');
+  changeHeight('#integrantes .tabla-contenido');
 })();

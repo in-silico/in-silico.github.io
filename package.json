@@ -7,7 +7,7 @@
     "build-css": "postcss -u autoprefixer -u postcss-custom-properties -o  build/main.css assets/css/style.css",
     "build-js": "browserify build/main.js -o assets/js/bundle.js",
     "build": "npm run build-css && npm run build-js",
-    "serve": "npm run build && http-server .",
+    "server": "npm run build && http-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

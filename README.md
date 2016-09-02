@@ -3,6 +3,7 @@ in-silico's main web site
 
 ### Run
 ```
+npm install
 npm run server
 ```
 
