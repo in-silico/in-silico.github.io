@@ -226,11 +226,18 @@
   "contest": [
     {
       "year": "2016",
-      "teams": [ 1, 2, 3 ]
+      "teams": [1, 2, 3],
+      "coach": []
     },
     {
       "year": "2015",
-      "teams": [ 4, 5, 6 ]
+      "teams": [ 4, 5, 6 ],
+      "coach": []
+    },
+    {
+      "year": "2014",
+      "teams": [],
+      "coach": []
     }
   ]
 }

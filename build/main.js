@@ -90,6 +90,20 @@
   //Contest
   let teams = json["team"];
   let contest = json["contest"];
+  //Search team
+  let found;
+
+  function getTeam(id) {
+    for (let i = 0; i < teams.length; i++) {
+      // alert(teams[i].id);
+      if (teams[i].id == id) found = teams[i];
+    }
+  }
+
+  getTeam(3);
+  alert(found.name);
+
+
   // alert(contest[0].year);
 
   let div_teams = document.getElementById("seleccion-utp");
@@ -102,6 +116,14 @@
     div_teams.innerHTML +=
     "<div class=\"row\" id=\"" + year + "\">" +
       "<h2>" + year + "</h2>"
+
+    let team = contest[i].teams;
+
+    for (var j = 0; j < team.length; j++) {
+      let a_team = team[j];
+      // alert(a_team);
+    }
+
 
     div_teams.innerHTML +=
     "</div>"
