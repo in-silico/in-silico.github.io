@@ -1,4 +1,6 @@
 # in-silico.github.io
+[![dependencies Status](https://david-dm.org/in-silico/in-silico.github.io/status.svg)](https://david-dm.org/in-silico/in-silico.github.io)
+
 in-silico's main web site
 
 ### Run

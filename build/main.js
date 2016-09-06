@@ -1,11 +1,6 @@
 (function() {
   var $ = require('jquery');
 
-  changeHeight('#2016 .tabla-contenido');
-  changeHeight('#2015 .tabla-contenido');
-  changeHeight('#2014 .tabla-contenido');
-  changeHeight('#integrantes .tabla-contenido');
-
   $('.group').click(function() {
     // alert("hola");
     $('.active').removeClass('active');
@@ -93,8 +88,28 @@
   "</div>"
 
   //Contest
-  
+  let teams = json["team"];
+  let contest = json["contest"];
+  // alert(contest[0].year);
 
+  let div_teams = document.getElementById("seleccion-utp");
+  div_teams.innerHTML +=
+  "<div class=\"contenido\">"
+
+  for (var i = 0; i < contest.length; i++) {
+    let year = contest[i].year;
+    // alert(year);
+    div_teams.innerHTML +=
+    "<div class=\"row\" id=\"" + year + "\">" +
+      "<h2>" + year + "</h2>"
+
+    div_teams.innerHTML +=
+    "</div>"
+
+  }
+
+  div_teams.innerHTML +=
+  "</div>"
 
 
   changeHeight('#2016 .tabla-contenido');

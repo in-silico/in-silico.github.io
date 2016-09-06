@@ -1,6 +1,6 @@
 {
   "member": [
-  {
+    {
       "id":    1,
       "name":  "Hugo Humberto Morales Peña",
       "photo": "hugo.jpeg",
@@ -203,7 +203,25 @@
       "name":    "UTP-tardos",
       "members": [ 3, 4, 5 ],
       "coach":   ""
-    }
+    },
+    {
+      "id":      4,
+      "name":    "TC-Bahia",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    },
+    {
+      "id":      5,
+      "name":    "Triforce X",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    },
+    {
+      "id":      6,
+      "name":    "Quantum",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    },
   ],
   "contest": [
     {
@@ -212,7 +230,7 @@
     },
     {
       "year": "2015",
-      "teams": [ ]
+      "teams": [ 4, 5, 6 ]
     }
   ]
 }

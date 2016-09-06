@@ -2,11 +2,6 @@
 (function() {
   var $ = require('jquery');
 
-  changeHeight('#2016 .tabla-contenido');
-  changeHeight('#2015 .tabla-contenido');
-  changeHeight('#2014 .tabla-contenido');
-  changeHeight('#integrantes .tabla-contenido');
-
   $('.group').click(function() {
     // alert("hola");
     $('.active').removeClass('active');
@@ -94,8 +89,28 @@
   "</div>"
 
   //Contest
-  
+  let teams = json["team"];
+  let contest = json["contest"];
+  // alert(contest[0].year);
 
+  let div_teams = document.getElementById("seleccion-utp");
+  div_teams.innerHTML +=
+  "<div class=\"contenido\">"
+
+  for (var i = 0; i < contest.length; i++) {
+    let year = contest[i].year;
+    // alert(year);
+    div_teams.innerHTML +=
+    "<div class=\"row\" id=\"" + year + "\">" +
+      "<h2>" + year + "</h2>"
+
+    div_teams.innerHTML +=
+    "</div>"
+
+  }
+
+  div_teams.innerHTML +=
+  "</div>"
 
 
   changeHeight('#2016 .tabla-contenido');
@@ -107,7 +122,7 @@
 },{"../data/data.json":2,"jquery":3}],2:[function(require,module,exports){
 module.exports={
   "member": [
-  {
+    {
       "id":    1,
       "name":  "Hugo Humberto Morales Peña",
       "photo": "hugo.jpeg",
@@ -310,7 +325,25 @@ module.exports={
       "name":    "UTP-tardos",
       "members": [ 3, 4, 5 ],
       "coach":   ""
-    }
+    },
+    {
+      "id":      4,
+      "name":    "TC-Bahia",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    },
+    {
+      "id":      5,
+      "name":    "Triforce X",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    },
+    {
+      "id":      6,
+      "name":    "Quantum",
+      "members": [ 3, 4, 5 ],
+      "coach":   ""
+    },
   ],
   "contest": [
     {
@@ -319,7 +352,7 @@ module.exports={
     },
     {
       "year": "2015",
-      "teams": [ ]
+      "teams": [ 4, 5, 6 ]
     }
   ]
 }
