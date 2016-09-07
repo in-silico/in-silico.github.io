@@ -64,7 +64,6 @@
   let div_members = document.getElementById("integrantes");
   let content = `<div class="contenido"><div class="row">`;
 
-
   for (var i = 0; i< members.length; i++) {
     let {photo, state} = members[i];
     if (!photo.localeCompare("")) photo = "profile.png";
@@ -107,14 +106,15 @@
   // alert(found.name);
 
   let div_teams = document.getElementById("seleccion-utp");
-  div_teams.innerHTML +=
-  "<div class=\"contenido\">"
+  // div_teams.innerHTML +=
+  // "<div class=\"contenido\">"
+  content = `<div class="contenido">`;
 
   for (let i = 0; i < contest.length; i++) {
     let year = contest[i].year;
-    div_teams.innerHTML +=
-    "<div class=\"row\" id=\"" + year + "\">" +
-      "<h2>" + year + "</h2>"
+    content +=
+    `<div class="row" id="${year}">
+      <h2>${year}</h2>`;
 
     let team = contest[i].teams;
 
@@ -123,20 +123,20 @@
       getTeam(a_team);
       let name_team = found.name;
       let members_team = found.members;
-      alert(name_team);
-      div_teams.innerHTML +=
-      "<div class=\"col-6 center\">" + name_team
+      // alert(name_team);
+      content +=
+      `<div class="col-6 center">${name_team}`;
       for (let k = 0; k < members_team.length; k++) {
         let a_member = members_team[k];
         getMember(a_member);
         // alert(found.name);
         let name = found.name;
-        alert(name);
+        // alert(name);
         let photo = found.photo;
         if (!photo.localeCompare("")) photo = "profile.png";
 
-        div_teams.innerHTML +=
-        "<div class=\"col-2\">" +
+        content +=
+        "<div class=\"col-4\">" +
           "<div class=\"tabla-contenido-img\">" +
             "<img src=\"/assets/img/" + photo + "\" />" +
           "</div>" +
@@ -146,21 +146,20 @@
         "</div>"
       }
 
-      div_teams.innerHTML +=
+      content +=
       "</div>"
     }
-    div_teams.innerHTML +=
+    content +=
     "<div class=\"col-6 center\"> Coach"
 
 
-    div_teams.innerHTML +=
+    content +=
     "</div> </div>"
 
 
   }
 
-  div_teams.innerHTML +=
-  "</div>"
+  div_members.innerHTML = `${content}</div>`;
 
 
   changeHeight('#2016 .tabla-contenido');
