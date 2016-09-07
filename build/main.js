@@ -62,30 +62,26 @@
   members = sortByKey(members, 'name');
 
   let div_members = document.getElementById("integrantes");
-  div_members.innerHTML +=
-  "<div class=\"contenido\">" +
-    "<div class=\"row\">"
+  let content = `<div class="contenido"><div class="row">`;
+
 
   for (var i = 0; i< members.length; i++) {
-    let photo = members[i].photo;
-    let state = members[i].state;
+    let {photo, state} = members[i];
     if (!photo.localeCompare("")) photo = "profile.png";
     if (state.localeCompare("inactive")) state = "";
 
-    div_members.innerHTML +=
-    "<div class=\"col-2\">" +
-      "<div class=\"tabla-contenido-img " + state + "\">" +
-        "<img src=\"/assets/img/" + photo + "\" />" +
-      "</div>" +
-      "<div class=\"tabla-contenido " + state + " \">" +
-        members[i].name +
-      "</div>" +
-    "</div>"
+    content += `
+    <div class="col-2">
+      <div class="tabla-contenido-img ${state}">
+        <img src="/assets/img/${photo}"/>
+      </div>
+      <div class="tabla-contenido ${state}">
+        ${members[i].name}
+      </div>
+    </div>`
   }
 
-  div_members.innerHTML +=
-    "</div>" +
-  "</div>"
+  div_members.innerHTML = `${content}</div></div>`;
 
   //Contest
   let teams = json["team"];
