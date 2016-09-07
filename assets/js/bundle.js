@@ -100,18 +100,22 @@
       if (teams[i].id == id) found = teams[i];
     }
   }
+  //Search Member
+  function getMember(id) {
+    for (let i = 0; i < members.length; i++) {
+      // alert(teams[i].id);
+      if (members[i].id == id) found = members[i];
+    }
+  }
 
-  getTeam(3);
-  alert(found.name);
-
-
-  // alert(contest[0].year);
+  // getTeam(3);
+  // alert(found.name);
 
   let div_teams = document.getElementById("seleccion-utp");
   div_teams.innerHTML +=
   "<div class=\"contenido\">"
 
-  for (var i = 0; i < contest.length; i++) {
+  for (let i = 0; i < contest.length; i++) {
     let year = contest[i].year;
     // alert(year);
     div_teams.innerHTML +=
@@ -120,14 +124,44 @@
 
     let team = contest[i].teams;
 
-    for (var j = 0; j < team.length; j++) {
+    for (let j = 0; j < team.length; j++) {
       let a_team = team[j];
-      // alert(a_team);
+      getTeam(a_team);
+      let name_team = found.name;
+      let members_team = found.members;
+      alert(name_team);
+      div_teams.innerHTML +=
+      "<div class=\"col-6 center\">" + name_team
+      for (let k = 0; k < members_team.length; k++) {
+        let a_member = members_team[k];
+        getMember(a_member);
+        // alert(found.name);
+        let name = found.name;
+        alert(name);
+        let photo = found.photo;
+        if (!photo.localeCompare("")) photo = "profile.png";
+
+        div_teams.innerHTML +=
+        "<div class=\"col-2\">" +
+          "<div class=\"tabla-contenido-img\">" +
+            "<img src=\"/assets/img/" + photo + "\" />" +
+          "</div>" +
+          "<div class=\"tabla-contenido\">" +
+             name +
+          "</div>" +
+        "</div>"
+      }
+
+      div_teams.innerHTML +=
+      "</div>"
     }
+    div_teams.innerHTML +=
+    "<div class=\"col-6 center\"> Coach"
 
 
     div_teams.innerHTML +=
-    "</div>"
+    "</div> </div>"
+
 
   }
 
